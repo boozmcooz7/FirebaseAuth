@@ -4,24 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="24dp"
     android:background="#F0F4F8"
-    tools:context=".MainActivity">
+    tools:context=".SignUpActivity">
 
     <TextView
-        android:id="@+id/goToSignUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
-        android:textColor="#4A90E2"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome Back!"
+        android:text="Create Account"
         android:textSize="32sp"
         android:textColor="#1E293B"
         android:textStyle="bold"
@@ -30,14 +22,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in to continue"
+        android:text="Get started by creating a new account"
         android:textSize="16sp"
         android:textColor="#475569"
         android:layout_marginBottom="40dp"/>
 
-    <!-- Email Input -->
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/signUpEmailEditText"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:hint="Email"
@@ -47,51 +38,34 @@
         android:textColor="#1E293B"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Password Input -->
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/signUpPasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:hint="Password"
+        android:hint="Password (min. 6 characters)"
         android:inputType="textPassword"
         android:background="@drawable/edit_text_background"
         android:padding="16dp"
         android:textColor="#1E293B"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Sign In Button -->
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/signUpButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Sign In"
-        android:backgroundTint="#4A90E2"
+        android:text="Sign Up"
+        android:backgroundTint="#22C55E"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:layout_marginBottom="24dp"
         app:cornerRadius="8dp"/>
 
     <TextView
-        android:id="@+id/statusTextView"
+        android:id="@+id/goToSignInTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Signed Out"
-        android:textColor="#475569"
-        android:textSize="16sp"
-        android:layout_marginBottom="24dp"/>
-
-    <!-- Google Sign In Button -->
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/googleSignInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/goToSignUpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign Up"
+        android:text="Already have an account? Sign In"
         android:textColor="#4A90E2"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+        android:textSize="16sp"/>
 
 </LinearLayout>

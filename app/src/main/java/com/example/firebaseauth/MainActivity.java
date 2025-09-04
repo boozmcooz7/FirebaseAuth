@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     // Firebase
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
+    private TextView goToSignUpTextView;
+
 
     // Activity Result Launcher for Google Sign-In
     private ActivityResultLauncher<Intent> googleSignInLauncher;
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         signInButton = findViewById(R.id.signInButton);
         googleSignInButton = findViewById(R.id.googleSignInButton);
         statusTextView = findViewById(R.id.statusTextView);
+        goToSignUpTextView = findViewById(R.id.goToSignUpTextView);
+
 
         // --- 3. Configure Google Sign-In ---
         // We configure Google Sign-In to request the user's ID, email address, and basic
@@ -99,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(MainActivity.this, "Please enter email and password.", Toast.LENGTH_SHORT).show();
             }
+        });
+        goToSignUpTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(intent);
         });
 
         googleSignInButton.setOnClickListener(v -> signInWithGoogle());
