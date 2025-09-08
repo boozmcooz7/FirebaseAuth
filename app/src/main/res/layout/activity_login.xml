@@ -6,37 +6,38 @@
     android:gravity="center"
     android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to the Recipe App!"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="16dp"
+        android:onClick="chooseImage" />
 
-    <Button
-        android:id= "@+id/btnGoToLogin"
+    <EditText
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign Up / Log In" />
+        android:hint="email"
+        android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/btnGoToRecipes"
+    <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go To Recipes" />
+        android:hint="password"
+        android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnGoToFilter"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Filter Recipes" />
+        android:text="sign up" />
 
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:layout_marginTop="16dp" />
+        android:text="login" />
 
 </LinearLayout>
